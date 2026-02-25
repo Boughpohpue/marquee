@@ -40,7 +40,6 @@ export class MqHover extends Enum {
 export class MqBehavior extends Enum {
   static SLIDE      = new MqBehavior();
   static SCROLL     = new MqBehavior();
-  static BOUNCE     = new MqBehavior();
   static { this.seal(); }
 }
 

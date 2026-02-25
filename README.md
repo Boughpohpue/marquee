@@ -29,16 +29,28 @@ Fully programmatic.
 
 ## 📦 Installation
 
-Just include your script:
+Link css stylesheet:
 
 ```html
-<script src="marquee.js"></script>
+<link rel="stylesheet" href="https://boughpohpue.github.io/artifactory/js/marquee/1.0.1/marquee.css">
 ```
 
-Or import as a module:
+Include as a classic script:
+
+```html
+<script src="https://boughpohpue.github.io/artifactory/js/marquee/1.0.1/marquee.js"></script>
+```
+
+Include as a JS module:
+
+```html
+<script type="module" src="https://boughpohpue.github.io/artifactory/js/marquee/1.0.1/marquee.mod.js"></script>
+```
+
+Import into your JS module:
 
 ```js
-import { Marquee } from "./marquee.js";
+import { Marquee } from "https://boughpohpue.github.io/artifactory/js/marquee/1.0.1/marquee.mod.js";
 ```
 
 ---

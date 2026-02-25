@@ -10,47 +10,47 @@ class Enum {
   }
 }
 
-class MqSpeed extends Enum {
+export class MqSpeed extends Enum {
   static FAST     = new MqSpeed();
   static SLOW     = new MqSpeed();
   static NORMAL   = new MqSpeed();
   static { this.seal(); }
 }
 
-class MqDelay extends Enum {
+export class MqDelay extends Enum {
   static NONE   = new MqDelay();
   static LONG   = new MqDelay();
   static SHORT  = new MqDelay();
   static { this.seal(); }
 }
 
-class MqRange extends Enum {
+export class MqRange extends Enum {
   static INNER   = new MqRange();
   static OUTER   = new MqRange();
   static { this.seal(); }
 }
 
-class MqHover extends Enum {
+export class MqHover extends Enum {
   static NONE   = new MqHover();
   static PLAY   = new MqHover();
   static PAUSE  = new MqHover();
   static { this.seal(); }
 }
 
-class MqBehavior extends Enum {
+export class MqBehavior extends Enum {
   static SLIDE      = new MqBehavior();
   static SCROLL     = new MqBehavior();
   static { this.seal(); }
 }
 
-class MqPlayback extends Enum {
+export class MqPlayback extends Enum {
   static SINGLE   = new MqPlayback();
   static REPEAT   = new MqPlayback();
   static BOUNCE   = new MqPlayback();
   static { this.seal(); }
 }
 
-class MqDirection extends Enum {
+export class MqDirection extends Enum {
   static UP     = new MqDirection();
   static DOWN   = new MqDirection();
   static LEFT   = new MqDirection();
@@ -61,11 +61,12 @@ class MqDirection extends Enum {
   get isHorizontal() { return this === MqDirection.LEFT || this === MqDirection.RIGHT; }
 }
 
-class MqMaps {
+export class MqMaps {
+
   static #speedMap = new Map([
-    [MqSpeed.FAST, 144],
-    [MqSpeed.NORMAL, 96],
-    [MqSpeed.SLOW, 69]
+    [MqSpeed.FAST, 3],
+    [MqSpeed.NORMAL, 9],
+    [MqSpeed.SLOW, 12]
   ]);
   static #delayMap = new Map([
     [MqDelay.NONE, 0],
@@ -89,7 +90,7 @@ class MqMaps {
   }
 }
 
-class Marquee {
+export class Marquee {
 
   static #defaults = {
     allowHtml: false,
@@ -159,7 +160,6 @@ class Marquee {
       container.id = id;
     if (typeof style === "string" && style.length > 0)
       container.style.cssText = style;
-
     target.appendChild(container);
     this.#appendMarqueeTrack(container, text, config);
 
@@ -353,3 +353,5 @@ class Marquee {
         : "infinite";
   }
 }
+
+export default Marquee;
