@@ -142,7 +142,7 @@ Text animated horizontally.
 
 ---
 
-## 🧭 Playback
+## 🎬 Playback
 
 ### MgPlayback.SINGLE
 Stops animation after one iteration.
