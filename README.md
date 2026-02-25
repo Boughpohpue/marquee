@@ -144,7 +144,7 @@ Text animated horizontally.
 
 ## 🎬 Playback
 
-### MgPlayback.SINGLE
+### MqPlayback.SINGLE
 Stops animation after one iteration.
 
 ### MqPlayback.REPEAT
