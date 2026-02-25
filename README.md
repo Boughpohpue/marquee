@@ -148,7 +148,7 @@ Text animated horizontally.
 Stops animation after one iteration.
 
 ### 'MqPlayback.REPEAT'
-Repeats animation from start.
+Repeats animation from start position.
 
 ### 'MqPlayback.BOUNCE'
 Alternates between start and end positions.
@@ -171,7 +171,7 @@ playback: 3
 | 'UP'      | Vertical |
 | 'DOWN'    | Vertical |
 
-Note: Direction is autmatically fixed for non-matching Behavior axis.
+Note: Direction is automatically fixed if axis doesn't match Behavior.
 
 ---
 
