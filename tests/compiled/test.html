@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <title>TESTING: MARQUEE</title>
+    <link rel="stylesheet" href="../../compiled/marquee.css">
+    <script src="../../compiled/marquee.js"></script>
+	</head>
+	<body>
+    <script type="text/javascript">
+      Marquee.create("This is some very long text to be marqueeeeeeeeeeed...");
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element11a",
+        "width: 244px; font-weight: bold; color: blue; background-color: yellow;",
+        { direction: MqDirection.LEFT, speed: MqSpeed.FAST, range: MqRange.INNER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element11b",
+        "width: 244px; font-weight: bold; color: blue; background-color: gold;",
+        { direction: MqDirection.LEFT, speed: MqSpeed.FAST, range: MqRange.OUTER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element21a",
+        "width: 244px; font-weight: bold; color: black; background-color: orange;",
+        { behavior: MqBehavior.SCROLL, playback: MqPlayback.BOUNCE, speed: MqSpeed.FAST, range: MqRange.INNER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element21b",
+        "width: 244px; font-weight: bold; color: black; background-color: darkorange;",
+        { behavior: MqBehavior.SCROLL, playback: MqPlayback.BOUNCE, speed: MqSpeed.FAST, range: MqRange.OUTER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element12a",
+        "width: 444px; font-weight: bold; color: blue; background-color: yellow;",
+        { direction: MqDirection.RIGHT, speed: MqSpeed.FAST, range: MqRange.INNER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element12b",
+        "width: 444px; font-weight: bold; color: blue; background-color: gold;",
+        { direction: MqDirection.RIGHT, speed: MqSpeed.FAST, range: MqRange.OUTER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element22a",
+        "width: 444px; font-weight: bold; color: black; background-color: orange;",
+        { behavior: MqBehavior.SCROLL, playback: MqPlayback.BOUNCE, speed: MqSpeed.FAST, range: MqRange.INNER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element22b",
+        "width: 444px; font-weight: bold; color: black; background-color: darkorange;",
+        { behavior: MqBehavior.SCROLL, playback: MqPlayback.BOUNCE, speed: MqSpeed.FAST, range: MqRange.OUTER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element13a",
+        "width: 844px; font-weight: bold; color: blue; background-color: yellow;",
+        { direction: MqDirection.LEFT, speed: MqSpeed.FAST, range: MqRange.INNER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element13b",
+        "width: 844px; font-weight: bold; color: blue; background-color: gold;",
+        { direction: MqDirection.LEFT, speed: MqSpeed.FAST, range: MqRange.OUTER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element23a",
+        "width: 844px; font-weight: bold; color: black; background-color: orange;",
+        { behavior: MqBehavior.SCROLL, playback: MqPlayback.BOUNCE, speed: MqSpeed.FAST, range: MqRange.INNER });
+      Marquee.create(
+        "This is some very long text to be marqueeeeeeeeeeed...",
+        document.body,
+        "marquee_element23b",
+        "width: 844px; font-weight: bold; color: black; background-color: darkorange;",
+        { behavior: MqBehavior.SCROLL, playback: MqPlayback.BOUNCE, speed: MqSpeed.FAST, range: MqRange.OUTER });
+        Marquee.create(
+          "This is some very long text to be marqueeeeeeeeeeed...",
+          document.body,
+          "marquee_element23b",
+          "width: 963px; font-weight: bold; color: black; background-color: chocolate;",
+          { behavior: MqBehavior.SCROLL, playback: MqPlayback.SINGLE, speed: MqSpeed.FAST, range: MqRange.INNER });
+    </script>
+    <br/>
+    <script type="text/javascript">
+      const longVerticalText = `
+        Line 1<br/>
+        Line 2<br/>
+        Line 3<br/>
+        Line 5<br/>
+        Line 4<br/>
+        Line 6<br/>
+        Line 7<br/>
+        Line 8`;
+      Marquee.create(
+        longVerticalText,
+        document.body,
+        "slide_1a",
+        "width: 333px; height: 44px; background: lightgray;",
+        { behavior: MqBehavior.SLIDE, direction: MqDirection.UP, speed: MqSpeed.SLOW, allowHtml: true });
+      Marquee.create(
+        longVerticalText,
+        document.body,
+        "slide_2a",
+        "width: 333px; height: 100px; background: lightblue; font-weight: bolder;",
+        { behavior: MqBehavior.SLIDE, playback: 3, direction: MqDirection.DOWN, speed: MqSpeed.NORMAL, range: MqRange.OUTER, allowHtml: true });
+      Marquee.create(
+        longVerticalText,
+        document.body,
+        "slide_3a",
+        "width: 333px; height: 100px; background: darkgray; font-weight: bold;",
+        { behavior: MqBehavior.SLIDE, direction: MqDirection.UP, speed: MqSpeed.SLOW, range: MqRange.INNER, allowHtml: true });
+      Marquee.create(
+        longVerticalText,
+        document.body,
+        "slide_3a",
+        "width: 333px; height: 100px; background: gray; font-weight: bold;",
+        { behavior: MqBehavior.SLIDE, playback: MqPlayback.BOUNCE, direction: MqDirection.UP, speed: MqSpeed.SLOW, range: MqRange.INNER, allowHtml: true });
+      Marquee.create(
+        longVerticalText,
+        document.body,
+        "slide_4a",
+        "width: 333px; height: 144px; background: peachpuff;",
+        { behavior: MqBehavior.SLIDE, direction: MqDirection.DOWN, speed: MqSpeed.FAST, allowHtml: true });
+      Marquee.create(
+        longVerticalText,
+        document.body,
+        "slide_5a",
+        "width: 333px; height: 144px; background: antiquewhite;",
+        { behavior: MqBehavior.SLIDE, playback: MqPlayback.BOUNCE, direction: MqDirection.DOWN, speed: MqSpeed.FAST, allowHtml: true });
+    </script>
+	</body>
+</html>
