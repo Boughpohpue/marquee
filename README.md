@@ -132,25 +132,25 @@ Marquee.create("Custom", document.body, null, "", {
 
 ---
 
-## 🧭 Behaviors
+## 🧭 Behavior
 
-### 'MqBehavior.SLIDE'
+### MqBehavior.SLIDE
 Text animated vertically.
 
-### 'MqBehavior.SCROLL'
+### MqBehavior.SCROLL
 Text animated horizontally.
 
 ---
 
-## 🧭 Playbacks
+## 🧭 Playback
 
-### 'MgPlayback.SINGLE'
+### MgPlayback.SINGLE
 Stops animation after one iteration.
 
-### 'MqPlayback.REPEAT'
+### MqPlayback.REPEAT
 Repeats animation from start position.
 
-### 'MqPlayback.BOUNCE'
+### MqPlayback.BOUNCE
 Alternates between start and end positions.
 
 
@@ -162,16 +162,16 @@ playback: 3
 
 ---
 
-## ➡️ Directions
+## ➡️ Direction
 
-| Direction | Axis |
-|-----------|------|
-| 'LEFT'    | Horizontal |
-| 'RIGHT'   | Horizontal |
-| 'UP'      | Vertical |
-| 'DOWN'    | Vertical |
+| Direction           | Axis       | Description   |
+|---------------------|------------|---------------|
+| MqDirection.LEFT    | Horizontal | Right to left |
+| MqDirection.RIGHT   | Horizontal | Left to right |
+| MqDirection.UP      | Vertical   | Down to up    |
+| MqDirection.DOWN    | Vertical   | Up to down    |
 
-Note: Direction is automatically fixed if axis doesn't match Behavior.
+Note: Direction is automatically fixed when its axis doesn't match Behavior's.
 
 ---
 
@@ -179,9 +179,9 @@ Note: Direction is automatically fixed if axis doesn't match Behavior.
 
 Predefined speeds:
 
-- 'MqSpeed.FAST'
-- 'MqSpeed.NORMAL'
-- 'MqSpeed.SLOW'
+- MqSpeed.FAST
+- MqSpeed.NORMAL
+- MqSpeed.SLOW
 
 
 Or provide a custom number (pixels per second):
@@ -196,28 +196,28 @@ Speed automatically scales based on content distance.
 
 ## ⏱ Delay
 
-- 'MqDelay.NONE'
-- 'MqDelay.SHORT'
-- 'MqDelay.LONG'
+- MqDelay.NONE
+- MqDelay.SHORT
+- MqDelay.LONG
 - Or a numeric value in seconds
 
 ---
 
 ## 🎯 Range
 
-### 'MqRange.INNER'
+### MqRange.INNER
 Animation stays within container bounds.
 
-### 'MqRange.OUTER'
+### MqRange.OUTER
 Animation travels fully outside container bounds.
 
 ---
 
 ## 🖱 Hover Action
 
-- 'MqHover.NONE'
-- 'MqHover.PLAY'
-- 'MqHover.PAUSE'
+- MqHover.NONE
+- MqHover.PLAY
+- MqHover.PAUSE
 
 ---
 
