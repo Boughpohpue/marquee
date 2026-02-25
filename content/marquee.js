@@ -238,12 +238,11 @@ export class Marquee {
   }
 
   static #getSpeed(containerDimension, textDimension, config) {
-    if (containerDimension === 0) return config.speed;
-
+    const maxDuration = 24;
     const totalDistance = config.range === MqRange.INNER
       ? Math.max(containerDimension, textDimension)
       : containerDimension + (textDimension * 2);
-    return Math.min(24, totalDistance / config.speed);
+    return Math.min(maxDuration, totalDistance / config.speed);
   }
 
   static #getDirection(config) {

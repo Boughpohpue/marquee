@@ -226,7 +226,13 @@ Animation travels fully outside container bounds.
 Animation duration scales proportionally to travel distance:
 
 ```js
-duration = (distance / containerSize) * baseSpeed
+    maxDuration = 24; // in seconds
+	
+    distance = config.range === MqRange.INNER
+      ? Math.max(containerDimension, textDimension)
+      : containerDimension + (textDimension * 2);
+	  
+    duration = Math.min(maxDuration, distance / config.speed);
 ```
 
 This keeps perceived speed consistent regardless of content length.
