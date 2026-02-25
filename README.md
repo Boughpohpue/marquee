@@ -82,7 +82,7 @@ Marquee.create(
   "my-marquee",
   "/width: 300px; height: 40px; background: #111; color: white;"
 );
-///```
+```
 
 ---
 
@@ -249,6 +249,14 @@ Marquee.create(
   }
 );
 ```
+
+---
+
+## 🔬 DEMO
+
+Follow the link below and see it in action:
+
+https://boughpohpue.github.io/marquee/tests/compiled/test.html
 
 ---
 
