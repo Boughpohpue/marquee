@@ -92,7 +92,7 @@ Marquee.create(
   "Styled marquee",
   document.body,
   "my-marquee",
-  "/width: 300px; height: 40px; background: #111; color: white;"
+  "width: 300px; height: 40px; background: #111; color: white;"
 );
 ```
 
