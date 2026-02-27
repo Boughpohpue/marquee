@@ -13,8 +13,8 @@ const axesDirsMap = new Map([
   ['VERTICAL', ['UP', 'DOWN']]]);
 
 const axesStylesMap = new Map([
-  ['HORIZONTAL', 'width: 100%; font-weight: bold;  background-color: yellow; margin-top: 1px; border: solid 1px black;'],
-  ['VERTICAL', 'width: 33%; height: 369px; font-weight: bold;  background-color: yellow; margin-top: 1px; border: solid 1px black;'],
+  ['HORIZONTAL', 'width: calc(100% - 2); font-weight: bold;  background-color: yellow; margin: 1px; border: solid 1px black;'],
+  ['VERTICAL', 'width: 33%; height: 369px; font-weight: bold;  background-color: yellow; margin: 1px; border: solid 1px black;'],
 ]);
 
 function createTestLayout() {

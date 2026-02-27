@@ -15,7 +15,6 @@ body {
   max-width: 74vw;
   border: 1px solid #ddd;
   overflow: hidden;
-  padding: 1px;
 }
 .control-panel {
   height: 98vh;
