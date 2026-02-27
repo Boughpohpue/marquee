@@ -271,9 +271,12 @@ Marquee.create(
 Follow links below and see **Marquee** in action...
 
 Simple demo:
+
 https://boughpohpue.github.io/marquee/tests/compiled/test.html
 
+
 Interactive demo:
+
 https://boughpohpue.github.io/marquee/tests/compiled/test_interactive.html
 
 ---
