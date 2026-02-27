@@ -10,17 +10,19 @@ Fully programmatic.
 
 ## ✨ Features
 
-- Both axes behaviors:
-  - SLIDE (vertical)
-  - SCROLL (horizontal)
+- Two axes animation:
+  - HORIZONTAL (scroll)
+  - VERTICAL (slide)
 - Multiple playback modes:
   - SINGLE
   - REPEAT
   - BOUNCE
+  - ITERATIONS
 - Inner / outer range modes
 - Enum-based configuration (type-safe pattern)
 - Dynamic duration based on content size
-- Text as textContent or innerHTML
+- Multiline text handling
+- innerHTML support (option)
 - Hover play / pause control
 - Zero dependencies
 - Modern ES2022+ (private fields, static blocks)
@@ -62,9 +64,9 @@ Marquee.create params:
 ```js
 // text: string
 // targetElement: HTMLElement
-// marqueeElementId: string
-// marqueeElementStyle: string
-// configOptions: object
+// marqueeElementId: string (optional)
+// marqueeElementStyle: string (optional)
+// configOptions: object (optional)
 
 Marquee.create(text, targetElement, marqueeElementId, marqueeElementStyle, configOptions);
 ```
@@ -80,9 +82,7 @@ Marquee.create("Hello World!");
 Append to a specific container:
 
 ```js
-const container = document.getElementById("my-container");
-
-Marquee.create("Scrolling text", container);
+Marquee.create("Scrolling text", document.getElementById("my-container"));
 ```
 
 With custom styling:
@@ -100,14 +100,14 @@ Marquee.create(
 
 ## ⚙️ Configuration Options
 
-Configurable properties: 
+Configurable properties:
 
 ```js
 // name: type (default)
 // --------------------------
 // range: MqRange (MqRange.OUTER)
 // hover: MqHover (MqHover.PAUSE)
-// behavior: MqBehavior (MqBehavior.SCROLL)
+// axis: MqAxis (MqAxis.HORIZONTAL)
 // direction: MqDirection (MqDirection.LEFT)
 // delay: MqDelay | number [s] (MqDelay.NONE)
 // speed: MqSpeed | number [px/s] (MqSpeed.NORMAL)
@@ -123,7 +123,7 @@ Marquee.create("Custom", document.body, null, "", {
   delay: MqDelay.SHORT,
   hover: MqHover.PAUSE,
   range: MqRange.OUTER,
-  behavior: MqBehavior.SLIDE,
+  axis: MqAxis.VERTICAL,
   playback: MqPlayback.REPEAT,
   direction: MqDirection.DOWN,
   allowHtml: true,
@@ -132,13 +132,17 @@ Marquee.create("Custom", document.body, null, "", {
 
 ---
 
-## 🧭 Behavior
+## 🧭 Axis
 
-### MqBehavior.SLIDE
-Text animated vertically.
+### MqAxis.VERTICAL
+Text animated vertically
+- DOWN to UP (MqDirection.UP)
+- UP to DOWN (MqDirection.DOWN)
 
-### MqBehavior.SCROLL
-Text animated horizontally.
+### MqAxis.HORIZONTAL
+Text animated horizontally
+- RIGHT to LEFT (MqDirection.LEFT)
+- LEFT to RIGHT (MqDirection.RIGHT)
 
 ---
 
@@ -153,12 +157,8 @@ Repeats animation from start position.
 ### MqPlayback.BOUNCE
 Alternates between start and end positions.
 
-
-Or provide a custom number (repeat times):
-
-```js
-playback: 3
-```
+### Custom iterations count
+You can also provide custom number of iterations
 
 ---
 
@@ -171,26 +171,22 @@ playback: 3
 | MqDirection.UP      | Vertical   | Down to up    |
 | MqDirection.DOWN    | Vertical   | Up to down    |
 
-Note: Direction is automatically fixed when its axis doesn't match Behavior's.
+Note: Direction is automatically fixed when its axis doesn't match provided MqAxis param.
 
 ---
 
 ## 🎚 Speed
 
 Predefined speeds:
-
 - MqSpeed.FAST
 - MqSpeed.NORMAL
 - MqSpeed.SLOW
 
+### Custom speed
+You can also provide a custom value (pixels per second)
 
-Or provide a custom number (pixels per second):
 
-```js
-speed: 169
-```
-
-Speed automatically scales based on content distance.
+Note: Speed automatically scales based on content distance.
 
 ---
 
@@ -199,7 +195,9 @@ Speed automatically scales based on content distance.
 - MqDelay.NONE
 - MqDelay.SHORT
 - MqDelay.LONG
-- Or a numeric value in seconds
+
+### Custom delay
+You can also provide a custom value (seconds)
 
 ---
 
@@ -229,7 +227,7 @@ Animation duration scales proportionally to travel distance:
     distance = config.range === MqRange.INNER
       ? Math.max(containerDimension, textDimension)
       : containerDimension + (textDimension * 2);
-	  
+
     duration = distance / config.speed;
 ```
 
@@ -270,9 +268,13 @@ Marquee.create(
 
 ## 🔬 DEMO
 
-Follow the link below and see it in action:
+Follow links below and see **Marquee** in action...
 
+Simple demo:
 https://boughpohpue.github.io/marquee/tests/compiled/test.html
+
+Interactive demo:
+https://boughpohpue.github.io/marquee/tests/compiled/test_interactive.html
 
 ---
 

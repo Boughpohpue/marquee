@@ -1,0 +1,63 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: hidden;
+  margin: 0;
+  padding: 1vh;
+}
+
+.demo-container {
+  height: 98vh;
+  min-width: 74vw;
+  max-width: 74vw;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.control-panel {
+  height: 98vh;
+  min-width: 24vw;
+  max-width: 24vw;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.control-panel .separator-gap {
+  width: 96%;
+  min-height: 3vh;
+  max-height: 3vh;
+}
+
+.control-panel label {
+  margin: 6px;
+}
+
+.control-panel textarea {
+  width: 93%;
+  min-height: 144px;
+  max-height: 144px;
+  padding: 6px;
+  resize: none;
+}
+
+.control-panel select {
+  width: 96%;
+  padding: 6px;
+}
+
+.control-panel button {
+  width: 96%;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.control-panel input[type=checkbox] {
+  transform: translateY(-12px);
+}
+.control-panel input[type=number] {
+  width: 27%;
+  padding: 6px;
+}
