@@ -3,7 +3,7 @@ const enums = {
   range: [ 'OUTER', 'INNER' ],
   speed: [ 'FAST', 'NORMAL', 'SLOW', 'CUSTOM' ],
   delay: [ 'NONE', 'SHORT', 'LONG', 'CUSTOM' ],
-  playback: [ 'SINGLE', 'REPEAT', 'BOUNCE', 'CUSTOM' ],
+  playback: [ 'REPEAT', 'BOUNCE', 'SINGLE', 'CUSTOM' ],
   direction: [ 'LEFT', 'RIGHT', 'UP', 'DOWN' ],
   hover: [ 'NONE', 'PLAY', 'PAUSE' ],
 };
@@ -13,8 +13,8 @@ const axesDirsMap = new Map([
   ['VERTICAL', ['UP', 'DOWN']]]);
 
 const axesStylesMap = new Map([
-  ['HORIZONTAL', 'width: 100%; font-weight: bold;  background-color: yellow; margin: 1px;'],
-  ['VERTICAL', 'width: 33%; height: 369px; font-weight: bold;  background-color: yellow; margin: 1px;'],
+  ['HORIZONTAL', 'width: 100%; font-weight: bold;  background-color: yellow; margin: 1px; border: solid 1px black;'],
+  ['VERTICAL', 'width: 33%; height: 369px; font-weight: bold;  background-color: yellow; margin: 1px; border: solid 1px black;'],
 ]);
 
 function createTestLayout() {
