@@ -92,7 +92,7 @@ Marquee.create(
   "Styled marquee",
   document.body,
   "my-marquee",
-  "width: 300px; height: 40px; background: #111; color: white;"
+  "width: 300px; height: 40px; background-color: #111; color: white;"
 );
 ```
 
@@ -251,15 +251,16 @@ Marquee.create(
   "Breaking News — Something awesome happened!",
   document.body,
   "news-ticker",
-  "width: 100%; height: 40px; background: black; color: white;",
+  "width: 100%; height: 40px; background-color: black; color: white;",
   {
-    behavior: MqBehavior.SCROLL,
-	playback: MqPlayback.BOUNCE,
+    axis: MqAxis.HORIZONTAL,
+	  playback: MqPlayback.BOUNCE,
     direction: MqDirection.LEFT,
     speed: MqSpeed.NORMAL,
     hover: MqHover.PAUSE,
     range: MqRange.INNER,
-	allowHtml: true
+    delay: 5,
+	  allowHtml: false
   }
 );
 ```
