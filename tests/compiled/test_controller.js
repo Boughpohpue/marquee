@@ -14,7 +14,7 @@ const axesDirsMap = new Map([
 
 const axesStylesMap = new Map([
   ['HORIZONTAL', 'width: calc(100% - 2); font-weight: bold;  background-color: yellow; margin: 1px; border: solid 1px black;'],
-  ['VERTICAL', 'width: 33%; height: 369px; font-weight: bold;  background-color: yellow; margin: 1px; border: solid 1px black;'],
+  ['VERTICAL', 'width: 169px; height: 196px; font-weight: bold;  background-color: yellow; margin: 1px; border: solid 1px black;'],
 ]);
 
 function createTestLayout() {
