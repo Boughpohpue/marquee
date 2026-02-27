@@ -254,13 +254,13 @@ Marquee.create(
   "width: 100%; height: 40px; background-color: black; color: white;",
   {
     axis: MqAxis.HORIZONTAL,
-	  playback: MqPlayback.BOUNCE,
+    playback: MqPlayback.BOUNCE,
     direction: MqDirection.LEFT,
     speed: MqSpeed.NORMAL,
     hover: MqHover.PAUSE,
     range: MqRange.INNER,
     delay: 5,
-	  allowHtml: false
+    allowHtml: false
   }
 );
 ```
